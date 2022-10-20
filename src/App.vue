@@ -17,7 +17,7 @@
       };
       const parser = new XMLParser(options);
       try {
-      await axios.get('/src/assets/data.xml', { validateStatus: (status) => status === 200 })
+      await axios.get('https://vue-project-pearl.vercel.app/data.xml')
         .then(response => {
           var xmlText = response.data
           var result1 = parser.parse(xmlText)
@@ -39,7 +39,7 @@
                 const captionArr = result1.config.schedules.s[i].caption.split(" ");
                 this.caption1 = captionArr[0]
                 this.caption2 = captionArr[1]
-                this.imgPath = 'src/assets/'+result1.config.assets.asset[i]["@_path"]
+                this.imgPath = '/src/assets/'+result1.config.assets.asset[i]["@_path"]
                 this.imgAlt = result1.config.assets.asset[i]["@_id"]
                 break;
             }
