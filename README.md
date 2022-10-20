@@ -1,5 +1,7 @@
 # vue-project
 
+--github link: https://github.com/tudorgonta/vue-project
+
 Ton run this project first install all the dependencies by running
 
 npm install
