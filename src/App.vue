@@ -17,7 +17,7 @@
       };
       const parser = new XMLParser(options);
       try {
-      await axios.get('/src/assets/data.xml', { validateStatus: false })
+      await axios.get('/src/assets/data.xml', { validateStatus: (status) => status === 200 })
         .then(response => {
           var xmlText = response.data
           var result1 = parser.parse(xmlText)
