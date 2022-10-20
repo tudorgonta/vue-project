@@ -11,12 +11,12 @@
       }
     },
 
-    mounted() {
+    async mounted() {
       const options = {
         ignoreAttributes : false
       };
       const parser = new XMLParser(options);
-      axios.get('/src/assets/data.xml')
+      await axios.get('/src/assets/data.xml')
         .then(response => {
           var xmlText = response.data
           var result1 = parser.parse(xmlText)
