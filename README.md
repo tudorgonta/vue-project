@@ -15,6 +15,6 @@ to compile and minify for production
 
 npm run build
 
-to preview the buid run
+to preview the build run
 
 npm run preview
