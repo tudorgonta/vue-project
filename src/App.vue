@@ -11,11 +11,12 @@
       }
     },
 
-    async mounted() {
+    async created() {
       const options = {
         ignoreAttributes : false
       };
       const parser = new XMLParser(options);
+      try {
       await axios.get('/src/assets/data.xml')
         .then(response => {
           var xmlText = response.data
@@ -58,7 +59,10 @@
             });
         }
         printNavTimingData()
+    } catch (error) {
+      console.log(error);
     }
+  }
   }
 </script>
 <template>
