@@ -39,7 +39,7 @@
                 const captionArr = result1.config.schedules.s[i].caption.split(" ");
                 this.caption1 = captionArr[0]
                 this.caption2 = captionArr[1]
-                this.imgPath = '/src/assets/'+result1.config.assets.asset[i]["@_path"]
+                this.imgPath = ''+result1.config.assets.asset[i]["@_path"]
                 this.imgAlt = result1.config.assets.asset[i]["@_id"]
                 break;
             }
